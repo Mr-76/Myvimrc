@@ -4,19 +4,23 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 "
 Plugin 'VundleVim/Vundle.vim'
+"
+Plugin 'kshenoy/vim-signature'
 "
 Plugin 'tpope/vim-fugitive'
 ""
 Plugin 'puremourning/vimspector'
+let g:vimspector_enable_mappings = 'HUMAN'
 ""
 Plugin 'scrooloose/nerdtree'
 ""
 Plugin 'mattn/emmet-vim'
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+""Plugin 'maralla/completor.vim'
 ""
 Plugin 'shime/vim-livedown'
 ""
@@ -25,15 +29,29 @@ Plugin 'frazrepo/vim-rainbow'
 Plugin 'nvie/vim-flake8'
 ""
 Plugin 'valloric/youcompleteme'
-""compilar-- python ----.py --all
 ""
 let g:rainbow_active = 1
 ""
-Plugin 'git://git.wincent.com/command-t.git'
+""Plugin 'git://git.wincent.com/command-t.git'
 ""
 "Plugin 'eaglemt/neco-ghc' 
+let g:haskellmode_completion_ghc = 0
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+""
+
+"Plugin 'racer-rust/vim-racer'
+"set hidden
+"let g:racer_cmd = "/home/cremoso/.cargo/bin/racer"
+"let g:racer_insert_paren = 1
+""
+"Plugin 'davidhalter/jedi-vim'
+""
+"Plugin 'rip-rip/clang_complete'
+""
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 ""
+"Plugin 'scrooloose/syntastic'
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -90,6 +108,18 @@ endif
 if ! isdirectory(expand(&g:undodir))
   silent! call mkdir(expand(&g:undodir), 'p', 0700)
 endif
+
+""nnoremap gp ipublic class name_of_file{public static void main(String[] args){}}
+""or
+
+"let extension = expand('%:e')
+
+"let java_e= ".java"
+
+"if  extension == java_c
+
+ab STJV public <C-G> class name_of_file{<CR><tab>public static void main(String[] args){<CR><tab>}<CR>}<esc>
+ab PSVM public static void main(){<CR>} 
 
 " Make shift-insert work like in Xterm
 if has('gui_running')
