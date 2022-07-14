@@ -9,6 +9,15 @@ Plugin 'VundleVim/Vundle.vim'
 "
 Plugin 'kshenoy/vim-signature'
 "
+Plugin 'jiangmiao/auto-pairs'
+"
+Plugin 'neomake/neomake'
+let g:neomake_python_enabled_makers = ['pylint']
+"
+Plugin 'sbdchd/neoformat'
+""
+Plugin 'vim-airline/vim-airline'
+""
 Plugin 'tpope/vim-fugitive'
 ""
 Plugin 'puremourning/vimspector'
@@ -126,3 +135,5 @@ if has('gui_running')
   map <S-Insert> <MiddleMouse>
   map! <S-Insert> <MiddleMouse>
 endif
+
+set autoread | au CursorHold * checktime | call feedkeys("lh")
