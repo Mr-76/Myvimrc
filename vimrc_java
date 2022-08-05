@@ -43,7 +43,10 @@ Plugin 'hrsh7th/cmp-path'
 Plugin 'hrsh7th/cmp-cmdline'
 Plugin 'dcampos/nvim-snippy'
 Plugin 'dcampos/cmp-snippy'
+Plugin 'kkoomen/vim-doge'
+let g:doge_enable_mappings = 1
 
+"let g:doge_mapping
 ""
 let g:rainbow_active = 1
 ""
