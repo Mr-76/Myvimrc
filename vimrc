@@ -8,59 +8,77 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'kshenoy/vim-signature'
+"Debug
 Plugin 'puremourning/vimspector'
+Plugin 'nvie/vim-flake8'
 let g:vimspector_enable_mappings = 'HUMAN'
-Plugin 'neoclide/coc.nvim'
+""""""""""""''''''""""""""""""
+"html
 Plugin 'alvan/vim-closetag'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'heavenshell/vim-pydocstring'
-let g:pydocstring_doq_path = '/home/shadow/envs_py/env/ENV/bin/doq'
-Plugin 'https://github.com/z3t0/arduvim'
 Plugin 'HTML-AutoCloseTag'
+Plugin 'shime/vim-livedown'
+Plugin 'mattn/emmet-vim'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+""""""""""""""""""""""""""
+"Bidings
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-fugitive'
+""""""""""""""""""""""""""""
+"Python
+Plugin 'heavenshell/vim-pydocstring'
+"Plugin 'davidhalter/jedi-vim'
+let g:pydocstring_doq_path = '/home/user/envs_py/env/ENV/bin/doq'
+"""""""''''''''''''''''"""""""
+"Arduino
+Plugin 'https://github.com/z3t0/arduvim'
+""""""""""""""""""""""""""""""
+"Nvim lsp's
+Plugin 'williamboman/nvim-lsp-installer'
 Plugin 'neovim/nvim-lspconfig'
 Plugin 'hrsh7th/nvim-cmp' 
+Plugin 'neoclide/coc.nvim'
 Plugin 'hrsh7th/cmp-nvim-lsp'
 Plugin 'hrsh7th/cmp-buffer'
 Plugin 'hrsh7th/cmp-path'
 Plugin 'hrsh7th/cmp-cmdline'
 Plugin 'artur-shaik/jc.nvim'
-Plugin 'valloric/youcompleteme'
-Plugin 'williamboman/nvim-lsp-installer'
-Plugin 'dcampos/nvim-snippy'
 Plugin 'dcampos/cmp-snippy'
+Plugin 'dcampos/nvim-snippy'
+"Autocomplete
+Plugin 'valloric/youcompleteme'
+""""""""""""""""""""""""""""
+"Docstring
 Plugin 'kkoomen/vim-doge'
 let g:doge_enable_mappings = 1
 "let g:doge_mapping
+""""""""""""""""""""""""""
+"Better writing
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'frazrepo/vim-rainbow'
+let g:rainbow_active = 1
+""""""""""""""""""""""""""""
+"Formating/linting
 Plugin 'neomake/neomake'
 let g:neomake_python_enabled_makers = ['pylint']
 Plugin 'sbdchd/neoformat'
-Plugin 'vim-airline/vim-airline'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'mattn/emmet-vim'
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
-Plugin 'shime/vim-livedown'
-Plugin 'frazrepo/vim-rainbow'
-Plugin 'nvie/vim-flake8'
-let g:rainbow_active = 1
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'scrooloose/syntastic'
-"Plugin 'davidhalter/jedi-vim'
-
-
-
-
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-""
+""""""""""""""""""""""""""""""""""""
+"UI
+Plugin 'vim-airline/vim-airline'
+""""""""""""""""""""""""""""""""""
+"Navigation
+Plugin 'scrooloose/nerdtree'
+""""""""""""""""""""""""""""""""""
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
