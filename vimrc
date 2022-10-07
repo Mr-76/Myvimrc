@@ -41,6 +41,7 @@ Plugin 'https://github.com/z3t0/arduvim'
 Plugin 'williamboman/nvim-lsp-installer'
 Plugin 'neovim/nvim-lspconfig'
 Plugin 'hrsh7th/nvim-cmp' 
+Plugin 'mfussenegger/nvim-jdtls'
 Plugin 'neoclide/coc.nvim'
 Plugin 'hrsh7th/cmp-nvim-lsp'
 Plugin 'hrsh7th/cmp-buffer'
@@ -49,6 +50,8 @@ Plugin 'hrsh7th/cmp-cmdline'
 Plugin 'artur-shaik/jc.nvim'
 Plugin 'dcampos/cmp-snippy'
 Plugin 'dcampos/nvim-snippy'
+Plugin 'preservim/tagbar'
+"""Plugin 'simrat39/symbols-outline.nvim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Autocomplete
 Plugin 'valloric/youcompleteme'
@@ -85,7 +88,7 @@ Plugin 'vim-airline/vim-airline-themes'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline_statusline_ontop=1
+let g:airline_statusline_ontop=0
 
 """"""""""""""""""""""""""""""""""
 "Navigation
@@ -158,4 +161,21 @@ set autoread | au CursorHold * checktime | call feedkeys("lh")
 autocmd Filetype html,css setlocal tabstop=4
 
 autocmd Filetype python,c,haskell,java setlocal tabstop=4
+
+SyntasticToggleMode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
