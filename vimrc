@@ -95,6 +95,17 @@ let g:airline_statusline_ontop=0
 Plugin 'scrooloose/nerdtree'
 """"""""""""""""""""""""""""""""""
 
+"""""""""""""""""''''''''''''''''''
+								"Commands maps
+nmap <silent> 1  :NERDTreeToggle<CR>
+nmap <silent> 2 :SyntasticToggleMode<CR>
+nmap <silent> 3 :YcmCompleter Format<CR>
+nnoremap <Up>    :resize -2<CR>
+nnoremap <Down>  :resize +2<CR>
+nnoremap <Left>  :vertical resize -2<CR>
+nnoremap <Right> :vertical resize +2<CR>
+""""""""""""""""""
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -162,7 +173,6 @@ autocmd Filetype html,css setlocal tabstop=4
 
 autocmd Filetype python,c,haskell,java setlocal tabstop=4
 
-SyntasticToggleMode
 
 
 
