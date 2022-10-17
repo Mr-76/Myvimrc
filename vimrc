@@ -97,6 +97,11 @@ Plugin 'scrooloose/nerdtree'
 
 """""""""""""""""''''''''''''''''''
 "Commands maps
+
+mksession Session.vim
+
+imap <tab>
+
 nmap <silent> 1  :NERDTreeToggle<CR>
 nmap <silent> 2 :SyntasticToggleMode<CR>
 nmap <silent> 3 :YcmCompleter Format<CR>
@@ -104,6 +109,16 @@ nnoremap <Up>    :resize -2<CR>
 nnoremap <Down>  :resize +2<CR>
 nnoremap <Left>  :vertical resize -2<CR>
 nnoremap <Right> :vertical resize +2<CR>
+nnoremap \ :bd<CR>
+nnoremap <F1> :UndotreeShow<CR> 
+
+autocmd Filetype java set makeprg=javac\ %
+autocmd Filetype java nnoremap <F7> :make<Return>:copen<Return>
+autocmd Filetype java nnoremap <F6> :cprevious<Return>
+autocmd Filetype java nnoremap <F8> :cnext<Return>
+
+autocmd Filetype java nnoremap <F9> :term java %:r<Return>
+autocmd Filetype java nnoremap  :cnext<Return>
 """"""""""""""""""
 "Tests
 Plugin 'vim-test/vim-test'
