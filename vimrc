@@ -86,6 +86,8 @@ let g:syntastic_check_on_wq = 0
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+"Maven
+Plugin 'mikelue/vim-maven-plugin'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_statusline_ontop=0
@@ -99,8 +101,10 @@ Plugin 'scrooloose/nerdtree'
 "Commands maps
 
 mksession Session.vim
+"au BufReadPost,BufNewFile *.md,*.txt,*.tex,*.java delm! | delm A-Z0-9
+au BufReadPost,BufNewFile *.md,*.txt,*.tex,*.java verbose imap <tab>
 
-imap <tab>
+
 
 nmap <silent> 1  :NERDTreeToggle<CR>
 nmap <silent> 2 :SyntasticToggleMode<CR>
@@ -122,8 +126,7 @@ autocmd Filetype java nnoremap  :cnext<Return>
 """"""""""""""""""
 "Tests
 Plugin 'vim-test/vim-test'
-
-
+""""""""""
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
