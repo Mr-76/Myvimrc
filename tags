@@ -1,0 +1,65 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/cremoso/git/Myvimrc/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20220828.0/
+1	.vimrc	/^	nmap <silent> 1  :NERDTreeToggle<CR>$/;"	m
+1	vimrc	/^	nmap <silent> 1  :NERDTreeToggle<CR>$/;"	m
+2	.vimrc	/^	nmap <silent> 2 :SyntasticToggleMode<CR>$/;"	m
+2	vimrc	/^	nmap <silent> 2 :SyntasticToggleMode<CR>$/;"	m
+3	.vimrc	/^	nmap <silent> 3 :YcmCompleter Format<CR>$/;"	m
+3	vimrc	/^	nmap <silent> 3 :YcmCompleter Format<CR>$/;"	m
+<Down>	.vimrc	/^	nnoremap <Down>  :resize +2<CR>$/;"	m
+<Down>	vimrc	/^	nnoremap <Down>  :resize +2<CR>$/;"	m
+<F1>	.vimrc	/^	nnoremap <F1> :UndotreeShow<CR> $/;"	m
+<F1>	vimrc	/^	nnoremap <F1> :UndotreeShow<CR> $/;"	m
+<Leader>s	.vimrc	/^	nnoremap <Leader>s :%s\/\\<<C-r><C-w>\\>\/$/;"	m
+<Leader>s	vimrc	/^	nnoremap <Leader>s :%s\/\\<<C-r><C-w>\\>\/$/;"	m
+<Left>	.vimrc	/^	nnoremap <Left>  :vertical resize -2<CR>$/;"	m
+<Left>	vimrc	/^	nnoremap <Left>  :vertical resize -2<CR>$/;"	m
+<Right>	.vimrc	/^	nnoremap <Right> :vertical resize +2<CR>$/;"	m
+<Right>	vimrc	/^	nnoremap <Right> :vertical resize +2<CR>$/;"	m
+<S-Insert>	.vimrc	/^  map <S-Insert> <MiddleMouse>$/;"	m
+<S-Insert>	.vimrc	/^  map! <S-Insert> <MiddleMouse>$/;"	m
+<S-Insert>	vimrc	/^  map <S-Insert> <MiddleMouse>$/;"	m
+<S-Insert>	vimrc	/^  map! <S-Insert> <MiddleMouse>$/;"	m
+<Up>	.vimrc	/^	nnoremap <Up>    :resize -2<CR>$/;"	m
+<Up>	vimrc	/^	nnoremap <Up>    :resize -2<CR>$/;"	m
+<c-q>	.vimrc	/^	nnoremap <c-q> :bd<CR>$/;"	m
+<c-q>	vimrc	/^	nnoremap <c-q> :bd<CR>$/;"	m
+<c-s>	.vimrc	/^	nnoremap <c-s> :w<CR> <bar> :mks!<CR>$/;"	m
+<c-s>	vimrc	/^	nnoremap <c-s> :w<CR> <bar> :mks!<CR>$/;"	m
+MakeTags	.vimrc	/^command! MakeTags !ctags -R . "tags with ctags nvim not working <>:?" " g^] ^] ctrl -- ] tags do/;"	c
+MakeTags	vimrc	/^command! MakeTags !ctags -R . "tags with ctags nvim not working <>:?" " g^] ^] ctrl -- ] tags do/;"	c
+g:airline#extensions#tabline#enabled	.vimrc	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
+g:airline#extensions#tabline#enabled	vimrc	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
+g:airline#extensions#tabline#formatter	.vimrc	/^let g:airline#extensions#tabline#formatter = 'unique_tail_improved'$/;"	v
+g:airline#extensions#tabline#formatter	vimrc	/^let g:airline#extensions#tabline#formatter = 'unique_tail_improved'$/;"	v
+g:airline_statusline_ontop	.vimrc	/^let g:airline_statusline_ontop=0$/;"	v
+g:airline_statusline_ontop	vimrc	/^let g:airline_statusline_ontop=0$/;"	v
+g:doge_enable_mappings	.vimrc	/^let g:doge_enable_mappings = 1$/;"	v
+g:doge_enable_mappings	vimrc	/^let g:doge_enable_mappings = 1$/;"	v
+g:neomake_python_enabled_makers	.vimrc	/^let g:neomake_python_enabled_makers = ['pylint']$/;"	v
+g:neomake_python_enabled_makers	vimrc	/^let g:neomake_python_enabled_makers = ['pylint']$/;"	v
+g:pydocstring_doq_path	.vimrc	/^let g:pydocstring_doq_path = '\/home\/shadow\/envs_py\/env\/ENV\/bin\/doq'$/;"	v
+g:pydocstring_doq_path	vimrc	/^let g:pydocstring_doq_path = '\/home\/shadow\/envs_py\/env\/ENV\/bin\/doq'$/;"	v
+g:rainbow_active	.vimrc	/^let g:rainbow_active = 1$/;"	v
+g:rainbow_active	vimrc	/^let g:rainbow_active = 1$/;"	v
+g:syntastic_always_populate_loc_list	.vimrc	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
+g:syntastic_always_populate_loc_list	vimrc	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
+g:syntastic_auto_loc_list	.vimrc	/^let g:syntastic_auto_loc_list = 1$/;"	v
+g:syntastic_auto_loc_list	vimrc	/^let g:syntastic_auto_loc_list = 1$/;"	v
+g:syntastic_check_on_open	.vimrc	/^let g:syntastic_check_on_open = 1$/;"	v
+g:syntastic_check_on_open	vimrc	/^let g:syntastic_check_on_open = 1$/;"	v
+g:syntastic_check_on_wq	.vimrc	/^let g:syntastic_check_on_wq = 0$/;"	v
+g:syntastic_check_on_wq	vimrc	/^let g:syntastic_check_on_wq = 0$/;"	v
+g:user_emmet_install_global	.vimrc	/^let g:user_emmet_install_global = 0$/;"	v
+g:user_emmet_install_global	vimrc	/^let g:user_emmet_install_global = 0$/;"	v
+g:vimspector_enable_mappings	.vimrc	/^let g:vimspector_enable_mappings = 'HUMAN'$/;"	v
+g:vimspector_enable_mappings	vimrc	/^let g:vimspector_enable_mappings = 'HUMAN'$/;"	v

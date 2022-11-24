@@ -1,6 +1,10 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
-
+filetype plugin on                  " required
+set path+=** "fuzzi find"
+set wildmenu
+"command! MakeTags !ctags -R . "tags with ctags nvim not working <>:?" " g^] ^] ctrl -- ] tags do codigo acha"
+"^x^f procura nome dos arquivos
+:silent exec "!command ctags -R ."
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -100,29 +104,32 @@ Plugin 'scrooloose/nerdtree'
 """""""""""""""""''''''''''''''''''
 "Commands maps
 
-mksession Session.vim
-"au BufReadPost,BufNewFile *.md,*.txt,*.tex,*.java delm! | delm A-Z0-9
-au BufReadPost,BufNewFile *.md,*.txt,*.tex,*.java verbose imap <tab>
+	mksession Session.vim
+	"au BufReadPost,BufNewFile *.md,*.txt,*.tex,*.java delm! | delm A-Z0-9
+	au BufReadPost,BufNewFile *.md,*.txt,*.tex,*.java verbose imap <tab>
+	nmap <silent> 1  :NERDTreeToggle<CR>
+	nmap <silent> 2 :SyntasticToggleMode<CR>
+	nmap <silent> 3 :YcmCompleter Format<CR>
+	nnoremap <Up>    :resize -2<CR>
+	nnoremap <Down>  :resize +2<CR>
+	nnoremap <Left>  :vertical resize -2<CR>
+	nnoremap <Right> :vertical resize +2<CR>
+	nnoremap <c-q> :bd<CR>
+	nnoremap <F1> :UndotreeShow<CR> 
+	nnoremap <c-s> :w<CR> <bar> :mks!<CR>
+	nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 
 
-nmap <silent> 1  :NERDTreeToggle<CR>
-nmap <silent> 2 :SyntasticToggleMode<CR>
-nmap <silent> 3 :YcmCompleter Format<CR>
-nnoremap <Up>    :resize -2<CR>
-nnoremap <Down>  :resize +2<CR>
-nnoremap <Left>  :vertical resize -2<CR>
-nnoremap <Right> :vertical resize +2<CR>
-nnoremap \ :bd<CR>
-nnoremap <F1> :UndotreeShow<CR> 
-
-autocmd Filetype java set makeprg=javac\ %
-autocmd Filetype java nnoremap <F7> :make<Return>:copen<Return>
-autocmd Filetype java nnoremap <F6> :cprevious<Return>
-autocmd Filetype java nnoremap <F8> :cnext<Return>
-
-autocmd Filetype java nnoremap <F9> :term java %:r<Return>
-autocmd Filetype java nnoremap  :cnext<Return>
+	"java specific
+		autocmd Filetype java set makeprg=javac\ %
+		autocmd Filetype java nnoremap <F7> :make<Return>:copen<Return>
+		autocmd Filetype java nnoremap <F6> :cprevious<Return>
+		autocmd Filetype java nnoremap <F8> :cnext<Return>
+		autocmd Filetype java nnoremap <F5> :term mvn install -f pom.xml<Return>
+		autocmd Filetype java nnoremap <F9> :term java %:r<Return>
+		autocmd Filetype java nnoremap <F2> :TestFile<Return>
+		autocmd Filetype java nnoremap <F3> :TestNearest<Return>
 """"""""""""""""""
 "Tests
 Plugin 'vim-test/vim-test'
