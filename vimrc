@@ -2,9 +2,9 @@ set nocompatible              " be iMproved, required
 filetype plugin on                  " required
 set path+=** "fuzzi find"
 set wildmenu
-"command! MakeTags !ctags -R . "tags with ctags nvim not working <>:?" " g^] ^] ctrl -- ] tags do codigo acha"
+""""""""""""""""""""""""""""""""""""""""""""""command! MakeTags !ctags -R . "tags with ctags nvim not working <>:?" " g^] ^] ctrl -- ] tags do codigo acha"
 "^x^f procura nome dos arquivos
-:silent exec "!command ctags -R ."
+"""""""""""""""""""""""""""""""""""""""""""""""":silent exec "!command ctags -R ."
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -15,6 +15,7 @@ Plugin 'kshenoy/vim-signature'
 "Debug
 Plugin 'puremourning/vimspector'
 Plugin 'nvie/vim-flake8'
+
 let g:vimspector_enable_mappings = 'HUMAN'
 """"""""""""''''''""""""""""""
 "html
@@ -39,19 +40,20 @@ let g:pydocstring_doq_path = '/home/shadow/envs_py/env/ENV/bin/doq'
 Plugin 'jmcantrell/vim-virtualenv'
 """""""''''''''''''''''"""""""
 "Arduino
-Plugin 'https://github.com/z3t0/arduvim'
+Plugin 'sudar/vim-arduino-syntax'
+Plugin 'stevearc/vim-arduino'
 """"""""""""""""""""""""""""""
 "Nvim lsp's
 Plugin 'williamboman/nvim-lsp-installer'
 Plugin 'neovim/nvim-lspconfig'
 Plugin 'hrsh7th/nvim-cmp' 
-Plugin 'mfussenegger/nvim-jdtls'
-Plugin 'neoclide/coc.nvim'
+"Plugin 'mfussenegger/nvim-jdtls' can mix with debug
+"Plugin 'neoclide/coc.nvim'
 Plugin 'hrsh7th/cmp-nvim-lsp'
 Plugin 'hrsh7th/cmp-buffer'
 Plugin 'hrsh7th/cmp-path'
 Plugin 'hrsh7th/cmp-cmdline'
-Plugin 'artur-shaik/jc.nvim'
+"Plugin 'artur-shaik/jc.nvim' no more
 Plugin 'dcampos/cmp-snippy'
 Plugin 'dcampos/nvim-snippy'
 Plugin 'preservim/tagbar'
@@ -77,18 +79,20 @@ Plugin 'chrisbra/csv.vim'
 Plugin 'neomake/neomake'
 let g:neomake_python_enabled_makers = ['pylint']
 Plugin 'sbdchd/neoformat'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 set statusline+=%#warningmsg#
+Plugin 'https://github.com/z3t0/arduvim' 
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 """"""""""""""""""""""""""""""""""""
 "UI
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
 
 "Maven
 Plugin 'mikelue/vim-maven-plugin'
@@ -108,7 +112,8 @@ Plugin 'scrooloose/nerdtree'
 	"au BufReadPost,BufNewFile *.md,*.txt,*.tex,*.java delm! | delm A-Z0-9
 	au BufReadPost,BufNewFile *.md,*.txt,*.tex,*.java verbose imap <tab>
 	nmap <silent> 1  :NERDTreeToggle<CR>
-	nmap <silent> 2 :SyntasticToggleMode<CR>
+	nnoremap <silent> 2 <Plug>(YCMToggleInlayHints)
+	"nmap <silent> 2 :SyntasticToggleMode<CR>
 	nmap <silent> 3 :YcmCompleter Format<CR>
 	nnoremap <Up>    :resize -2<CR>
 	nnoremap <Down>  :resize +2<CR>
@@ -118,7 +123,7 @@ Plugin 'scrooloose/nerdtree'
 	nnoremap <F1> :UndotreeShow<CR> 
 	nnoremap <c-s> :w<CR> <bar> :mks!<CR>
 	nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
-
+	highlight Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000
 
 
 	"java specific
@@ -130,6 +135,10 @@ Plugin 'scrooloose/nerdtree'
 		autocmd Filetype java nnoremap <F9> :term java %:r<Return>
 		autocmd Filetype java nnoremap <F2> :TestFile<Return>
 		autocmd Filetype java nnoremap <F3> :TestNearest<Return>
+	"arudino Especific
+	au BufRead,BufNewFile *.ino,*.pde set filetype=c++
+
+
 """"""""""""""""""
 "Tests
 Plugin 'vim-test/vim-test'
