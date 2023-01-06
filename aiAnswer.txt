@@ -1,0 +1,18 @@
+open ai said thesss
+
+There are many syntax groups that you can use with the highlight command in Vim. Some examples include:
+
+Comment: Highlight comments in a programming language.
+Identifier: Highlight identifiers (e.g., variable names) in a programming language.
+Function: Highlight function names in a programming language.
+Number: Highlight numeric literals in a programming language.
+Statement: Highlight statements in a programming language.
+PreProc: Highlight preprocessor directives in a programming language.
+Type: Highlight type names in a programming language.
+Special: Highlight special characters in a programming language (e.g., punctuation).
+Underlined: Underline text.
+Error: Highlight errors in the text.
+highlight diffAdded ctermfg=green
+highlight diffRemoved ctermfg=red
+:highlight * ctermfg=red
+cool stuff
