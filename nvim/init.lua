@@ -3,6 +3,8 @@ require("config.lsp")
 require("plugin.mason")
 require("plugin.html")
 require("plugin.css")
+require("plugin.rust")
+require("plugin.js")
 require("plugin.nvim-cmp")
 
 require("luasnip.loaders.from_vscode").lazy_load()

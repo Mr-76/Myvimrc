@@ -8,3 +8,8 @@ require'lspconfig'.cssls.setup {
 
 require'lspconfig'.css_variables.setup{}
 
+require'lspconfig'.cssmodules_ls.setup{}
+
+require'lspconfig'.emmet_ls.setup{}
+
+require'lspconfig'.eslint.setup{}
